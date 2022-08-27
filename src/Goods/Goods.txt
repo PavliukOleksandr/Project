@@ -1,0 +1,14 @@
+grohe      EUROCUBE       23406000      faucet         chrome    322                50        250
+grohe      EUROCUBE       23127000      faucet         chrome    187                3         75
+grohe      EUROCUBE       23446000      faucet         chrome    190                50        110
+grohe      EUROCUBE       23406000      faucet         chrome    322                50        180
+hansgrohe  logis          71070000      faucet         chrome    78.84              0         230
+hansgrohe  logis          71103000      faucet         chrome    106.6              0         100
+hansgrohe  logis          71251000      faucet         chrome    116.6              5         110
+hansgrohe  logis          71091000      faucet         chrome    137.7              0         190
+hansgrohe  logis          71257000      faucet         chrome    180.8              0         240
+Roca       Dama_N         327781000    washbasin      white     84.12              0         400*320
+Roca       Dama_N         327789000    washbasin      white     90.74              0         450*320
+Roca       Dama_N         327788000    washbasin      white     93.88              0         500*320   
+Roca       Dama_N         327787000    washbasin      white     103.32             0         550*320
+Roca       Dama_N         327785000    washbasin      white     110.28             0         600*320
