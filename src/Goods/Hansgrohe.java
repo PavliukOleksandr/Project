@@ -20,4 +20,13 @@ public class Hansgrohe extends Goods {
 		super(title, series, article, type, color, priceUe, quantity);
 		this.size = size;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Goods [priceUe=" + getPriceUe() + ", title=" + getTitle() + ", color=" + getColor() + ", series=" + 
+				getSeries() + ", article=" + getArticle() + ", quantity=" + getQuantity() + 
+				", type=" + getType() + ", size=" + size + "]";
+	}
+	
 }

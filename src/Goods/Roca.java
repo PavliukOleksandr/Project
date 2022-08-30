@@ -22,4 +22,5 @@ public class Roca extends Goods {
 		super(title, series, article, type, color, priceUe, quantity);
 		this.size = size;
 	}
+
 }

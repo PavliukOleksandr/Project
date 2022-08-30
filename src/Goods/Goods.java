@@ -97,4 +97,11 @@ public abstract class Goods {
 		this.quantity = quantity;
 		this.type = type;
 	}
+
+	@Override
+	public String toString() {
+		return "Goods [priceUe=" + priceUe + ", title=" + title + ", color=" + color + ", series=" + series
+				+ ", article=" + article + ", quantity=" + quantity + ", type=" + type + "]";
+	}
+	
 }

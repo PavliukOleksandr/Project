@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class GoodsInfo {
 	static ArrayList<Hansgrohe> list = new ArrayList<>();
@@ -21,10 +22,17 @@ public class GoodsInfo {
 	private static String line = null;
 
 	public static void main(String[] args) {
+		Scanner sk = new Scanner(System.in);
+		String s = sk.next();
 		Xxx();
-		Reading();
-		System.out.println(Exchange(43));
-		Exchange(43);
+		//Reading();
+		//System.out.println(Exchange(43));
+		//System.out.println(Exchange(43));
+		hansgrohe1("EUROCUBE").toString();
+		
+		//System.out.println(hansgrohe1("EUROCUBE"));
+
+		sk.close();
 	}
 
 	/**
@@ -44,14 +52,13 @@ public class GoodsInfo {
 
 			while ((line = bufferedReader.readLine()) != null) {
 				String[] res = line.split("\\W+");
-				// String title, String series, int article, String type,
+				        
 				list.add(new Hansgrohe(res[0], res[1], Integer.parseInt(res[2]), res[3],
-						// String color, double priceUe, int quantity, int size
 						res[4], Double.parseDouble(res[5]), Integer.parseInt(res[6]), Integer.parseInt(res[7])));
 			}
-			for (Hansgrohe hs : list) {
-				System.out.println(hs);
-			}
+			/*for (Hansgrohe hs : list) {
+				System.out.println(hs.toString());
+			}*/
 		} catch (Exception e) {
 			System.out.println("Catch 2");
 			e.printStackTrace();
@@ -60,7 +67,7 @@ public class GoodsInfo {
 	}
 
 	/// Пошук по назві серії
-	public static Hansgrohe hansgrohe(String series) {
+	public static Hansgrohe hansgrohe1(String series) {
 		Hansgrohe current = null;
 		for (Hansgrohe hansgrohe : list) {
 			if (hansgrohe.getSeries() == series) {
@@ -72,7 +79,7 @@ public class GoodsInfo {
 	}
 
 	// пощук по артикулу - не правильно, метод повторюється
-	public static Hansgrohe hansgrohe(int article) {
+	public static Hansgrohe hansgrohe2(int article) {
 		Hansgrohe current = null;
 		for (Hansgrohe hansgrohe : list) {
 			if (hansgrohe.getArticle() == article) {
@@ -97,4 +104,14 @@ public class GoodsInfo {
 			System.out.println(ex.getMessage());
 		}
 	}
+	public static Hansgrohe hansgrohe3(String series) {
+		Hansgrohe current = null;
+		for (int i = 0; i<list.size(); i++) {
+			if (list.get(i).getSeries() == series) {
+				current = list.get(i);
+			}
+		}
+		return current;
+	}
 }
+//title      series         article       type           color     priceUe       quantity       size
